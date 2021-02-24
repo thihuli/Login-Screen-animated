@@ -27,19 +27,33 @@
         </div>
         <p class="explanation">Although the bobcat is rarely seen, it is the most common wildcat in North America.
         </p>
-
+        
+        <div class="titles-input">
+          <p class="title border">Login</p>
+          <p class="register">Cadastro</p>
+        </div>
         <div class="inputs-login">
-          <div class="titles-input">
-            <p class="title">Login</p>
-            <p class="register">Cadastro</p>
-
-          </div>
 
           <input type="email" placeholder="E-mail">
           <input type="password" placeholder="Senha">
           <a href="#">Esqueci minha senha</a>
           <div class="button">
             <button>Login</button>
+          </div>
+        </div>
+        <div class="inputs-register">
+          <input type="text" class="school" placeholder="Nome da Escola">
+          <input type="text" class="email" placeholder="Seu e-mail">
+          <input type="text" class="password" placeholder="Crie uma senha">
+          <div class="select">
+            <select name="select" class="list">
+              <option value="valor1" selected>+55</option>
+              <option value="valor3">+03</option>
+            </select>
+            <input type="number" class="tel" placeholder="00 00000-0000">
+          </div>
+          <div class="button">
+            <button>Cadastrar</button>
           </div>
         </div>
       </div>
@@ -49,16 +63,16 @@
       </div>
 
     </div>
-    <div class="slider-images">
-      <img src="./assets/image_01.svg" alt="image-slider1" >
+    <div id="slider" class="slider-images">
+      <img src="./assets/image_01.svg" alt="image-slider1">
       <img src="./assets/image_02.svg" alt="image-slider1" class="selected">
+      <div id="dots" class="dots">
+        <span class="dot"></span>
+        <span></span>
+      </div>
     </div>
 
   </div>
-
-
-
-
   <script src="./JS/script.js"></script>
 </body>
 
