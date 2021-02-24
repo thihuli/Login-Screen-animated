@@ -73,28 +73,34 @@ body {
 
 }
 
-.content-form .inputs-login .titles-input {
+.content-form .titles-input {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .content-form .inputs-login {
   display: flex;
   flex-direction: column;
+  display: none;
 }
 
 
-.content-form .inputs-login .title{
+.content-form .title{
   font-size: 22px;
   font-weight: bold;
-  border-bottom: 3px solid #1ABC9C;
-  width: 12%;
   padding-bottom: 4px;
   margin-bottom: 5px;
   cursor: pointer;
+  color: #C4C4C4;
 }
 
-.content-form .inputs-login .register {
+.content-form .border {
+  border-bottom: 5px solid #1ABC9C;
+  color: #000;
+}
+
+.content-form .register {
   font-size: 22px;
   font-weight: normal;
   padding-bottom: 4px;
@@ -102,12 +108,20 @@ body {
   color: #C4C4C4;
   cursor: pointer;
 }
-.content-form .inputs-login input{
+.content-form .inputs-login input {
   border: 1px solid #C4C4C4;
   border-radius: 8px;
   padding: 8px 15px;
   outline: none;
   margin-top: 20px;
+}
+
+.content-form .inputs-register input {
+  border: 1px solid #C4C4C4;
+  border-radius: 8px;
+  padding: 8px 15px;
+  outline: none;
+  /* margin-top: 20px; */
 }
 
 .content-form .inputs-login a{
@@ -122,6 +136,11 @@ body {
   justify-content: center;
 }
 
+
+.content-form .inputs-register .button{
+  display: flex;
+  justify-content: center;
+}
 .content-form .inputs-login button{
   width: 160px;
   height: 40px;
@@ -136,30 +155,118 @@ body {
   font-style: normal;
   cursor: pointer;
   transition: filter 0.3s;
-  
+}
+
+.content-form .inputs-register button{
+  width: 160px;
+  height: 40px;
+  background-color: #1ABC9C;
+  box-shadow: 0 0 10px #33333326;
+  outline: none;
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  cursor: pointer;
+  transition: filter 0.3s;
+  margin-top: 5px;
 }
 
 .content-form .inputs-login button:hover {
   filter: brightness(80%);
 }
 
+.content-form .inputs-register button:hover {
+  filter: brightness(80%);
+}
 
-.slider-images {
-  max-width: 900px;
-  width: 40%;
-  height: 640px;
-  background-color: red;
+.inputs-register {
+  /* background-color: rosybrown; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+
+.inputs-register .select{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 5px
+  /* background-color: saddlebrown; */
+}
+
+.inputs-register .select select {
+  height: 35px;
+  width: 97px;
+  outline: none;
+  border-radius: 8px;
+  box-shadow: 0px 0px 6px #3333330F;
+  border: 1px solid #C4C4C4;
+  background-color: #fff;
+  padding-left: 20px;
+  color: #51627F;
+  font-style: normal;
+  opacity: 1;
+}
+
+.inputs-register .select 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.inputs-register .select input {
+  width: 100%;
+}
+
+#slider {
+  width: 80%;
+  max-width: 700px;
+  height: 600px;
+  min-width: 320px;
   position: relative;
   display: flex;
+  align-items: flex-end;
+}
+
+.dots {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 10px
 }
 
-.slider-images img {
+#slider .dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #1ABC9C;
+  opacity: 1;
+}
+
+#slider .dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #A8B4B1;
+  transition: opacity 1000ms
+}
+
+#slider img {
+  opacity: 0;
   position: absolute;
-  
-
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 800ms;
+  margin-bottom: 20px;
 }
 
-.slider-images img.selected {
-  display: none;
+#slider img.selected { 
+  opacity: 1;
 }
