@@ -131,6 +131,7 @@ body {
 
   50% {
     right: 40%;
+    opacity: 0;
   }
 
   to {
@@ -145,6 +146,7 @@ body {
 
   50% {
     right: 40%;
+    
   }
 
   to {
@@ -158,6 +160,7 @@ body {
 
   50% {
     left: 40%;
+    opacity: 0;
   }
 
   to {
@@ -168,12 +171,11 @@ body {
 .content-form .inputs-login {
   display: flex;
   flex-direction: column;
+  margin-top: 35px;
 }
 
 .content-form .none {
   display: none;
-  transition: ease-in-out;
-  transition-delay: 3s;
 }
 
 
