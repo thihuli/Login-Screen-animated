@@ -9,7 +9,6 @@ body {
 }
 
 .content {
-  /* background-color: #3333331F; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -74,19 +73,111 @@ body {
 }
 
 .content-form .titles-input {
-  display: flex;
-  justify-content: space-between;
+  display: block;
+  /* justify-content: space-between; */
   margin-bottom: 20px;
+  position: relative;
+}
+
+.content .login {
+  position: absolute; 
+  
+}
+
+.animation-login {
+  animation: changeLogin 3s;
+  animation-fill-mode: forwards;
+}
+
+.animation-register {
+  animation: changeRegister 3s;
+  animation-fill-mode: forwards
+}
+
+.back-login {
+  animation: backLogin 3s;
+  animation-fill-mode: forwards;
+}
+
+.back-register {
+  animation: backRegister 3s;
+  animation-fill-mode: forwards;
+}
+
+.content .register {
+  position: absolute;
+  right: 0; 
+}
+
+
+@keyframes changeLogin {
+  from {
+    left: 0;
+  }
+
+  50% {
+    left: 40%;
+  }
+
+  to {
+    left: 87%;
+  }
+}
+
+@keyframes changeRegister {
+  from {
+    right: 0;
+  }
+
+  50% {
+    right: 40%;
+  }
+
+  to {
+    right: 80%;
+  }
+}
+
+@keyframes backLogin {
+  from {
+    right: 0;
+  }
+
+  50% {
+    right: 40%;
+  }
+
+  to {
+    right: 87%;
+  }
+}
+@keyframes backRegister {
+  from {
+    left: 0;
+  }
+
+  50% {
+    left: 40%;
+  }
+
+  to {
+    left: 80%;
+  }
 }
 
 .content-form .inputs-login {
   display: flex;
   flex-direction: column;
+}
+
+.content-form .none {
   display: none;
+  transition: ease-in-out;
+  transition-delay: 3s;
 }
 
 
-.content-form .title{
+.content-form .login {
   font-size: 22px;
   font-weight: bold;
   padding-bottom: 4px;
@@ -95,19 +186,19 @@ body {
   color: #C4C4C4;
 }
 
+.content-form .register {
+  font-size: 22px;
+  font-weight: bold;
+  padding-bottom: 4px;
+  margin: 5px;
+  color: #C4C4C4;
+  cursor: pointer;
+}
 .content-form .border {
   border-bottom: 5px solid #1ABC9C;
   color: #000;
 }
 
-.content-form .register {
-  font-size: 22px;
-  font-weight: normal;
-  padding-bottom: 4px;
-  margin-bottom: 5px;
-  color: #C4C4C4;
-  cursor: pointer;
-}
 .content-form .inputs-login input {
   border: 1px solid #C4C4C4;
   border-radius: 8px;
@@ -124,11 +215,12 @@ body {
   /* margin-top: 20px; */
 }
 
-.content-form .inputs-login a{
+.content-form .inputs-login p{
   font-size: 16px;
   color: #000;
   margin-top: 10px;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .content-form .inputs-login .button{
@@ -186,7 +278,8 @@ body {
   /* background-color: rosybrown; */
   display: flex;
   flex-direction: column;
-  gap: 20px
+  gap: 20px;
+  margin-top: 35px;
 }
 
 .inputs-register .select{
@@ -270,3 +363,5 @@ input::-webkit-inner-spin-button {
 #slider img.selected { 
   opacity: 1;
 }
+
+
