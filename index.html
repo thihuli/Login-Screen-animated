@@ -29,19 +29,18 @@
         </p>
         
         <div class="titles-input">
-          <p class="title border">Login</p>
-          <p class="register">Cadastro</p>
+          <p id="login" onclick="removeCLassRegister()" class="login border">Login</p>
+          <p id="register" onclick="removeCLassLogin()" class="register ">Cadastro</p>
         </div>
-        <div class="inputs-login">
-
+        <div id="input-login" class="inputs-login ">
           <input type="email" placeholder="E-mail">
           <input type="password" placeholder="Senha">
-          <a href="#">Esqueci minha senha</a>
+          <p href="#">Esqueci minha senha</p>
           <div class="button">
             <button>Login</button>
           </div>
         </div>
-        <div class="inputs-register">
+        <div id="input-register"  class="inputs-register none">
           <input type="text" class="school" placeholder="Nome da Escola">
           <input type="text" class="email" placeholder="Seu e-mail">
           <input type="text" class="password" placeholder="Crie uma senha">
